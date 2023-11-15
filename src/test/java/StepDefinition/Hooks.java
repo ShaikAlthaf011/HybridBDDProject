@@ -15,7 +15,7 @@ public class Hooks {
 	}
 @After
 public void teardown() {
-	//driver.quit();
+	driver.quit();
 }
 public static WebDriver getDriver() {
 	return driver;
