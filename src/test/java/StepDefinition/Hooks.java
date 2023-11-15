@@ -11,7 +11,7 @@ public class Hooks {
 	@Before
 	public void setup() {
 		System.setProperty("webdriver.chrome.driver","C://chromedriver.exe");
-		
+		driver=new ChromeDriver();
 	}
 @After
 public void teardown() {

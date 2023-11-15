@@ -11,12 +11,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import OrPage.LoginPageTest;
 public class LoginApplication {
-	public WebDriver driver=Hooks.getDriver();
+	public static WebDriver driver;
   
   public LoginPageTest login;
 @Given("Login Application Url")
 public void login_application_url() {
-	driver=new ChromeDriver();
+	driver=Hooks.getDriver();
 	driver.navigate().to("https://www.opencart.com/index.php?route=cms/demo");
     driver.manage().window().maximize();
     login=new LoginPageTest(driver);
