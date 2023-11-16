@@ -98,6 +98,19 @@ public class LoginPageTest {
 	
 	@FindBy(css="select[class='form-select']")
 	public WebElement Theme;
+	
+	@FindBy(css="ul[id='collapse-2']>li:nth-child(2)")
+	public WebElement Installer;
+	
+	@FindBy(css="ul[id='collapse-2']>li:nth-child(3)")
+	public WebElement extension;
+	
+	@FindBy(css="select[id='input-type']")
+	public WebElement formes;
+	
+	@FindBy(css="div[class='input-group-text']")
+	public WebElement onclick_section;
+	
 	public LoginPageTest(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
@@ -158,5 +171,18 @@ public void place(String SearchThemes) {
 public void THEME(String DataModified) {
 	Theme.sendKeys(DataModified);
 	
+}
+public void install() {
+	Installer.click();
+}
+public void Extension() {
+	extension.click();
+}
+public void Formed(String Filter ) {
+	formes.sendKeys(Filter);
+	
+}
+public void filtersection() {
+	onclick_section.click();
 }
 }
