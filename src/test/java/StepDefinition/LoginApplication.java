@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import OrPage.LoginPageTest;
 public class LoginApplication {
@@ -98,5 +99,22 @@ public void i_am_extension_theme(String SearchThemes ) {
 @When("I am {string} modified")
 public void i_am_modified(String DataModified) {
     login.THEME(DataModified);
+}
+
+@Then("I am Enter the Installer")
+public void i_am_enter_the_installer() {
+    login.install();
+}
+@When("I am Enter the Extension")
+public void i_am_enter_the_extension() {
+    login.Extension();
+}
+@When("I am {string} extension")
+public void i_am_extension(String Filter) {
+   login.Formed(Filter);
+}
+@When("I am Enter the filter")
+public void i_am_enter_the_filter() {
+   login.filtersection();
 }
 }
